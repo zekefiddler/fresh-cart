@@ -10,16 +10,22 @@ There are some built in pauses that wait for user interaction while logging in a
 
 
 ### To Setup:
-1: Create a virtual environment with Python3 as the executor. (I reccomend using virtualenv, but Anaconda or some other environment management tool should also work.)
+1: Create a virtual environment with Python3 as the executor. 
 
-Example using `virtualenv`:    
-> `virtualenv -p {path to your python3 executable} rf_amazon_venv`     
->
-> 2: Spin up that virtual environment    
-> `source rf_amazon_venv/bin/activate`
->
-> 3 install the requirements `pip3 install -r requirements.txt`
->
+I use virtualenv, but Anaconda or some other environment management tool should work just as well.  
+
+ > Note: Virtualization isn't necessary to run the script, but it certainly makes dependency issues easier to manage if they happen to arise.  
+
+##### Example using `virtualenv`: 
+1: Create a new virtual environment.       
+ `virtualenv -p {path to your python3 executable} rf_amazon_venv`     
+
+ 2: Spin up that virtual environment.        
+ `source rf_amazon_venv/bin/activate`
+
+3: install the requirements    
+`pip3 install -r requirements.txt`
+
 
 This should get you set up to run the script successfully.  
 
@@ -40,7 +46,7 @@ Hard code your login info in the robot file
 | ${login} |  fakeUser@myfakeemail.com |  
 | ${password} | theMostUnfortunatePassword  | 
 ```
-then you can simple kickoff the script with `robot avail_deliveries.robot` 
+then you can simply kickoff the script with `robot avail_deliveries.robot` 
 
 ##### Other Methods:
  Store your login info as env variables that can be pulled from within the script. Or store you login info in separate variable files... the universe is full of possibilities.  It's up to you to decide how to use them.
