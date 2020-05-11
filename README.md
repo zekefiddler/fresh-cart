@@ -10,13 +10,18 @@ There are some built in pauses that wait for user interaction while logging in a
 
 
 ### To Setup:
-1: Create a virtual environment with Python3 as the executor
-> Example using `virtualenv`:    
+1: Create a virtual environment with Python3 as the executor. (I reccomend using virtualenv, but Anaconda or some other environment management tool should also work.)
+
+Example using `virtualenv`:    
 > `virtualenv -p {path to your python3 executable} rf_amazon_venv`     
+>
+> 2: Spin up that virtual environment    
+> `source rf_amazon_venv/bin/activate`
+>
+> 3 install the requirements `pip3 install -r requirements.txt`
+>
 
-2: Spin up that virtual environment and install the requirements `pip3 install -r requirements.txt`
-
-This should get you up and running.
+This should get you set up to run the script successfully.  
 
 ### To run the script:
 
