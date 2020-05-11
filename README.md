@@ -53,15 +53,15 @@ then you can simply kickoff the script with `robot avail_deliveries.robot`
 
 #### Some Notes on the Script
 
-> Note: I have 2fa set up with my amazon account, so the login process has a pause that waits for me to confirm that I have logged in successfully.  The dialog to confirm will likely be hiding behind the browser window once you've interacted with the browser to complete your 2fa. You must command-tab back to it and click `ok` to proceed. 
+I have 2fa set up with my amazon account, so the login process has a pause that waits for me to confirm that I have logged in successfully.  The dialog to confirm will likely be hiding behind the browser window once you've interacted with the session to complete your 2fa. You must command-tab back to the dialog and click `ok` to proceed. Otherwise you'll be left staring at the Amazon landing page and wonder why nothing is happening.
 
 If you don't use 2fa you can comment out the line that kicks up this dialog with a leading `#`:
 ``` 
 # |   | Pause Execution | Waiting for 2FA: \nClick `OK` once you are completely logged in |
 ```
-> There are a couple of other `Pause Execution` lines in the script that can be commented out as well.  I have them in there so that I can see what items (if any) will not make it to my cart if they are no longer available. But if you wish to cut to the chase, you can comment them out with a hash`#`, and they will be disregarded.  
+ There are a couple of other `Pause Execution` lines in the script that can be commented out as well.  I have them in there so that I can see what items (if any) will not make it to my cart if they are no longer available. But if you wish to cut to the chase, you can comment them out with a hash`#`, and they will be disregarded.  
 
-The `Pause Execution` line I would not comment out is the one in the `Alert` Keyword definition.  That pause is necessary if you want to select from a list of available time slots.  Otherwise the script will plow through it's loop and by doing so, it will select the first available slot. It will also not be clear that this was done until you log back in to Amazon and navigate to checkout to find that you have a slot already reserved.
+The `Pause Execution` line I would _**not**_ comment out however is the one in the `Alert` Keyword definition.  That pause is necessary if you want to select from a list of available time slots.  Otherwise the script will plow through it's loop and by doing so, it will select the first available slot. It will also not be clear that this was done until you log back in to Amazon and navigate to checkout to find that you have a slot already reserved.
 
 #### More Info About Robot Framework and the Selenium Library Used in the Script Here:
 

@@ -95,6 +95,7 @@
 | Alert |
 |    | Log To Console | Presumably we found an availability |
 |    | Run Process | say "We Found Some Available Delivery Times!" | shell=true |
+#    # Do not comment out the following Pause Execution line unless you want to select the first avaiable slot by default.
 |    | Pause Execution | Only click `ok` if you want to continue looking for deliver slots. \nHint: I don't reccomend you click `ok` until after you have selected a slot and have updated your order |
 
 
