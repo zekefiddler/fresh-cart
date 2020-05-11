@@ -1,11 +1,10 @@
 # fresh-cart
 ## Introduction
 A script to find available delivery Dates for a Fresh Cart:    
-This is by no means a ready-for-prime-time script (no pun intended).  It's just rough and dirty hacked together tool to get a jump on delivery times. I am aware that many of my design patterns here are atrocious. Robot Framework scripts are designed to be super easily readable if implemented wisely. But this repo is for sure not a great example. 
+This is by no means a ready-for-prime-time script (no pun intended).  It's just rough and dirty hacked together tool to get a jump on delivery times. I am aware that many of my design patterns here are atrocious. Robot Framework scripts are designed to be super easily readable if implemented wisely. But this repo is for sure not a great example. It's just slapped together to get a simple job done.
 
 #### TLDR
 The script will log into amazon and navigate to your fresh cart. It will then proceed to checkout and start looking for available delivery time slots over the next few days. 
-
 
 
 ### To Setup:
