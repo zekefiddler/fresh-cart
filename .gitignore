@@ -348,3 +348,8 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+selenium-screenshot-*.png
+output.xml
+report.html
+log.html
