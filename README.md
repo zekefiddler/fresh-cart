@@ -4,13 +4,15 @@ A script to find available delivery Dates for a Fresh Cart:
 This is by no means a ready-for-prime-time script (no pun intended).  It's just rough and dirty hacked together tool to get a jump on delivery times. I am aware that many of my design patterns here are atrocious. Robot Framework scripts are designed to be super easily readable if implemented wisely. But this repo is for sure not a great example. It's just slapped together to get a simple job done.
 
 #### TLDR
-The script will log into amazon and navigate to your fresh cart. It will then proceed to checkout and start looking for available delivery time slots over the next few days. 
+The script will log into amazon and navigate to your fresh cart. 
+It will then proceed to checkout and start looking for available delivery time slots over the next few days.
+There are some built in pauses that wait for user interaction while logging in and navigating to the delivery time selection.  See [Some Notes on the Script](#some-notes-on-the-script) for how to disable these if desired. 
 
 
 ### To Setup:
 1: Create a virtual environment with Python3 as the executor
 > Example using `virtualenv`:    
-> `virtualenv -p {path to your python3 executable} rf_amazon_venv     
+> `virtualenv -p {path to your python3 executable} rf_amazon_venv`     
 
 2: Spin up that virtual environment and install the requirements `pip3 install -r requirements.txt`
 
@@ -45,7 +47,7 @@ You can also comment out the line that kicks up this dialog like this:
 ``` 
 # |   | Pause Execution | Waiting for 2FA: \nClick `OK` once you are completely logged in |
 ```
-> There are a couple of other `Pause Execution` lines in the script that can be commented out as well.  I have them in there so that I can see what items (if any) will not make it to my cart if they are no longer available. But if you wish to cut to the chase, you can prepend those lines with a hash `#` and the will be disregarded.
+> There are a couple of other `Pause Execution` lines in the script that can be commented out as well.  I have them in there so that I can see what items (if any) will not make it to my cart if they are no longer available. But if you wish to cut to the chase, you can comment them out with a hash`#`, and they will be disregarded.
 
 #### More Info About Robot Framework and the Selenium Library Used in the Script Here:
 
