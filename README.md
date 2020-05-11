@@ -61,7 +61,7 @@ If you don't use 2fa you can comment out the line that kicks up this dialog with
 ```
  There are a couple of other `Pause Execution` lines in the script that can be commented out as well.  I have them in there so that I can see what items (if any) will not make it to my cart if they are no longer available. But if you wish to cut to the chase, you can comment them out with a hash`#`, and they will be disregarded.  
 
-The `Pause Execution` line I would _**not**_ comment out however is the one in the `Alert` Keyword definition.  That pause is necessary if you want to select from a list of available time slots.  Otherwise the script will plow through it's loop and by doing so, it will select the first available slot. It will also not be clear that this was done until you log back in to Amazon and navigate to checkout to find that you have a slot already reserved.
+The one `Pause Execution` line I would _**not**_ comment out however is the one in the `Alert` Keyword definition.  That pause is necessary if you want to select from a list of available time slots.  Otherwise the script will plow through it's loop and by doing so, it will select the first available slot. It will also not be clear that this was done until you log back in to Amazon and navigate to checkout only to find that you have a slot already reserved.
 
 #### More Info About Robot Framework and the Selenium Library Used in the Script Here:
 
