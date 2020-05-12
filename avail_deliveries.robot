@@ -72,24 +72,25 @@
 |    | [Documentation] | This will loop through the the given number of days and check for availability |
 |    | [Arguments] | ${this_start_Date} | ${loops} |
 |    | FOR | ${button} | IN RANGE | 0 | ${loops} |
-|    |      | log to console | Button: ${button} 
-|    |      | ${date} | Add Time To Date | ${this_start_date} | ${button} days | result_format=%Y-%m-%d |
-|    |      | ${button_no} | evaluate | ${button} + 1 |
-|    |      | log to console | Date: ${date} |
-# |    |      | Click Element | ${day_button}/li[${button_no}] |
-|    |      | Click Element | //span[@id='date-button-${date}']
-|    |      | Log to console | Button Clicked | 
-|    |      | Sleep | 2 |
-|    |      | ${availabities} | Run Keyword And Return Status |
-|    |      | ... | Page Should Not Contain Element | //div[@id='slot-container-${date}']${alert_content} |
-|    |      | Exit For Loop If | ${availabities} |
-|    |      | ${alert} | get text | //div[@id='slot-container-${date}']${alert_content} |
-|    |      | log to console | ${alert} |
-|    |      | ${not_available} | Run Keyword and Return Status |
-|    |      | ... | Should Contain | ${alert} | No doorstep delivery windows |
-|    |      | Log To Console  | Available Status ${not_available} |
-|    |      | Continue For Loop IF | ${not_available} |
-|    |      | Log To Console | This is after the continue for loop |
+|    |     | Sleep 1 |
+|    |     | log to console | Button: ${button} |
+|    |     | ${date} | Add Time To Date | ${this_start_date} | ${button} days | result_format=%Y-%m-%d |
+|    |     | ${button_no} | evaluate | ${button} + 1 |
+|    |     | log to console | Date: ${date} |
+# |    |     | Click Element | ${day_button}/li[${button_no}] |
+|    |     | Click Element | //span[@id='date-button-${date}']
+|    |     | Log to console | Button Clicked | 
+|    |     | Sleep | 2 |
+|    |     | ${availabities} | Run Keyword And Return Status |
+|    |     | ... | Page Should Not Contain Element | //div[@id='slot-container-${date}']${alert_content} |
+|    |     | Exit For Loop If | ${availabities} |
+|    |     | ${alert} | get text | //div[@id='slot-container-${date}']${alert_content} |
+|    |     | log to console | ${alert} |
+|    |     | ${not_available} | Run Keyword and Return Status |
+|    |     | ... | Should Contain | ${alert} | No doorstep delivery windows |
+|    |     | Log To Console  | Available Status ${not_available} |
+|    |     | Continue For Loop IF | ${not_available} |
+|    |     | Log To Console | This is after the continue for loop |
 |    | Run Keyword If | ${availabities} | Alert |
 
 | Alert |
